@@ -8,6 +8,7 @@ RUN (easy_install pip &&\
 ADD app/requirements.txt /opt/django/app/requirements.txt
 RUN pip install -r /opt/django/app/requirements.txt
 ADD . /opt/django/
+ADD app/requirements.txt /opt/django/app/requirements.txt
 
 RUN (echo "daemon off;" >> /etc/nginx/nginx.conf &&\
   rm /etc/nginx/sites-enabled/default &&\
