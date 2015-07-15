@@ -6,7 +6,7 @@ RUN (easy_install pip &&\
   pip install uwsgi)
 
 ADD app/requirements.txt /opt/django/app/requirements.txt
-RUN pip install -r /opt/django/app/requirements.txt
+RUN pip install /opt/django/app/requirements.txt
 ADD . /opt/django/
 
 RUN (echo "daemon off;" >> /etc/nginx/nginx.conf &&\
